@@ -1,0 +1,10 @@
+.menu {
+    grid-area: nav-menu;
+    background-color: red;
+}
+.link {
+    color: white;
+}
+.active {
+    color: #333333;
+}
