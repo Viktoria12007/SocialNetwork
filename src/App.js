@@ -10,23 +10,23 @@ import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <div className="app-wrapper">
-        <Header />
-        <NavMenu />
-        <div className="app-wrapper-content">
-          <Route path='/profile' component={Profile} />
-          <Route path='/messages' component={Messages} />
-          <Route path='/news' component={News} />
-          <Route path='/music' component={Music} />
-          <Route path='/settings' component={Settings} />
-        </div>
-      </div>
-    </BrowserRouter>
-  );
-}
+const App = (props) => {
+        return ( 
+        <BrowserRouter >
+                <div className = "app-wrapper" >
+                <Header />
+                <NavMenu />
+                <div className = "app-wrapper-content" >
+                <Route path = '/profile' render = {() => < Profile dataProfilePage = { props.state.profilePage } updateNewPostText = {props.updateNewPostText} addPost = {props.addPost}/>} />
+                <Route path = '/messages' render = {() => < Messages dataMessagesPage = { props.state.messagesPage } updateNewMessageText = {props.updateNewMessageText} addMessage = {props.addMessage}/>} />
+                <Route path = '/news' render = {() => < News /> } /> 
+                <Route path = '/music' render = {() => < Music /> } /> 
+                <Route path = '/settings'render = {() => < Settings /> } /> 
+                </div> 
+                </div> 
+                </BrowserRouter>
+                );
+                }
 
 
-export default App;
+                export default App;

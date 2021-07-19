@@ -1,24 +1,65 @@
 .messages {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 20px;
 }
+
+.messagesBox {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 .link {
     color: #333333;
 }
+
+
 /* .dialogs {
     color: yellow;
 } */
+
+
 /* .dialog {
     font-size: 20px;
 } */
-.historyMessages {
+
+
+/* .historyMessages {
     background-color: brown;
-}
-/* .message {
-    font-size: 22px;
 } */
+
+.message {
+    /* background-image: url('./Message/cloud2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center 0%; */
+    /* padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-top: 10px; */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: rgba(255, 0, 0, 0.7);
+    box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 30%);
+}
+
 .active {
     color: red;
+}
+
+.newMessage {
+    display: flex;
+}
+
+.enterMessage {
+    width: 100%;
+    resize: none;
+}
+
+.addMessage {
+    padding: 10px 15px;
+    color: #ffffff;
+    background-color: #333333;
 }

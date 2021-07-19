@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
 
-const Profile = () => {
+const Profile = (props) => {
     return (
     <div>
         <div className={style.banner}></div>
@@ -16,7 +16,7 @@ const Profile = () => {
                 <span className={style.link}>Web site: https://it-kamasutra.com</span>
             </div>
         </div>
-        <MyPosts />
+        <MyPosts dataPosts={props.dataProfilePage.dataPosts} newPostText={props.dataProfilePage.newPostText} updateNewPostText={props.updateNewPostText} addPost={props.addPost}/>
     </div>);
 }
 
