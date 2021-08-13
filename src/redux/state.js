@@ -1,5 +1,6 @@
-import { renderDOMTree } from "../render";
-
+let renderDOMTree = () => {
+    console.log('state change');
+}
 const state = {
     profilePage: {
         dataPosts: [
@@ -18,7 +19,7 @@ const state = {
             { id: '2', name: 'Alex' },
             { id: '3', name: 'Tess' },
             { id: '4', name: 'Igor' },
-            { id: '5', name: 'Alex' },
+            { id: '5', name: 'Alisa' },
         ],
         dataHistoryMessages: [
             { id: '1', message: 'Hello!' },
@@ -32,7 +33,7 @@ const state = {
     // sidebar: {}
 
 }
-export let addPost = () => {
+export const addPost = () => {
     // debugger;
     let newPost = {
         id: '7',
@@ -43,13 +44,13 @@ export let addPost = () => {
     state.profilePage.newPostText = '';
     renderDOMTree(state);
 }
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     // debugger;
     
     state.profilePage.newPostText = newText;
     renderDOMTree(state);
 }
-export let addMessage = () => {
+export const addMessage = () => {
     // debugger;
     let newMessage = {
         id: '6',
@@ -59,10 +60,14 @@ export let addMessage = () => {
     state.messagesPage.newMessageText = '';
     renderDOMTree(state);
 }
-export let updateNewMessageText = (newText) => {
+export const updateNewMessageText = (newText) => {
     // debugger;
     
     state.messagesPage.newMessageText = newText;
     renderDOMTree(state);
 }
+export const subscribe = (observer) => {
+  renderDOMTree = observer;
+}
+
 export default state;
